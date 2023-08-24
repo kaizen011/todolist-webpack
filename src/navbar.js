@@ -10,12 +10,13 @@ function navbarr(){
     const itemi = document.createElement('li');
     const itemi4 = document.createElement('li');
     const itemi2 = document.createElement('li');
-    itemi.textContent = 'Tab';
-    itemi4.textContent = 'HOME';
-    itemi2.textContent = 'Tab2';
+    itemi.textContent = 'Notes';
+    itemi4.textContent = 'Home';
+    itemi2.textContent = 'Projects';
 
     itemi.classList.add('midtab');
     itemi4.classList.add('backtab');
+    itemi2.classList.add('projects');
 
     ul.appendChild(itemi);
     ul.appendChild(itemi4);
