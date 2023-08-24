@@ -2,6 +2,7 @@
 
 
 function createAndAppendElements(){
+    // Declaring main content
     const contentDiv = document.getElementById('content');
     // Header Code
     const midbar = document.createElement('div');
@@ -20,38 +21,43 @@ function createAndAppendElements(){
 
     contentDiv.appendChild(midbar);
 
-    // Content Code
-    // const services = document.createElement('div');
-    // services.classList.add('services');
+
+    // Adding to do list tags
+    const todoContainer = document.createElement('div');
+    todoContainer.classList.add('todo-container');
+
+    const taskInput = document.createElement('input');
+    taskInput.setAttribute('type', 'text');
+    taskInput.setAttribute('id', 'task');
+    taskInput.setAttribute('placeholder', 'Add a new task');
+
+    const prioritySelect = document.createElement('select');
+    prioritySelect.setAttribute('id', 'priority');
+
+    const priorities = ['Low', 'Medium', 'High'];
+    for (const priority of priorities) {
+        const option = document.createElement('option');
+        option.setAttribute('value', priority.toLowerCase());
+        option.textContent = priority;
+        prioritySelect.appendChild(option);
+    }
+
+    const addButton = document.createElement('button');
+    addButton.setAttribute('id', 'add-btn');
+    addButton.textContent = 'Add';
+
+    const todoList = document.createElement('ul');
+    todoList.setAttribute('id', 'todo-list');
+
+    todoContainer.appendChild(taskInput);
+    todoContainer.appendChild(prioritySelect);
+    todoContainer.appendChild(addButton);
+    todoContainer.appendChild(todoList);
+
+    contentDiv.appendChild(todoContainer);
     
-
-    //  const service1 = document.createElement('div');
-    //  const service2 = document.createElement('div');
-    //  const service3 = document.createElement('div');
-    //  const service4 = document.createElement('div');
-
-   
-
-    //  let img = document.createElement("img")
-    //  img.setAttribute("src", "https://www.e-spincorp.com/wp-content/uploads/2018/02/deeplearning-security.png");
-    //  img.setAttribute("height", "280px");
-    //  img.setAttribute("width", "250px");
-
-    //  service1.appendChild(img); 
-    //  service2.appendChild(img.cloneNode(true));
-    //  service3.appendChild(img.cloneNode(true));
-    //  service4.appendChild(img.cloneNode(true));
+    // To Do List Logic
     
-
-    //  services.appendChild(service1);
-    //  services.appendChild(service2);
-    //  services.appendChild(service3);
-    //  services.appendChild(service4);
-
-
-    //  contentDiv.appendChild(services);
-
-
     
      return contentDiv;
 }
