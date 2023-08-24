@@ -1,0 +1,25 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Restaurant page using JS Append functions and new understanding of Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaizen011/restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaizen011/restaurant/issues"
+  },
+  "homepage": "https://github.com/kaizen011/restaurant#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
